@@ -825,15 +825,21 @@ html {
     
             footer{
                 width: 100%;
-                height: 400px;
+                height: 680px;
                 display: flex;
+                align-items: center;
                 flex-direction: column-reverse;
-                margin-top: 100px;
+                // border: 1px solid white;
+                margin-top: 60px;
+                padding-bottom: 80px;
     
                 .footer-left{
                     width: 100%;
-                    margin-top: 30px;
+                    margin-top: 40px;
                     font-size: 14rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
     
                     .footer-logo{
                         width: 70px;
@@ -846,11 +852,13 @@ html {
                 .footer-right{
                     width: 100%;
                     display: flex;
+                    flex-direction: column;
                     justify-content: flex-end;
     
                     ul{
                         list-style: none;
-                        width: 200px;
+                        width: 100%;
+                        text-align: center;
     
                        li{
                         padding: 10px 0;
@@ -868,7 +876,7 @@ html {
             .hanging-menu{
 
                 .hanging-menu-bar{
-                    width: 320px;
+                    width: 300px;
                     height: 60px;
         
                     a{
