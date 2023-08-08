@@ -127,6 +127,18 @@ html body main .biography .biography-right img {
   height: 500px;
   border-radius: 20px;
 }
+html body main .biography .biography-right a {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: rgba(128, 128, 128, 0.171);
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  margin-top: 50px;
+}
+html body main .biography .biography-right a .fa-solid {
+  margin-right: 10px;
+}
 html body main .biography .biography-right a:hover {
   background-color: rgb(65, 143, 222);
   color: white;
@@ -265,18 +277,6 @@ html body .hanging-menu .hanging-menu-bar a .fa-regular:hover {
   html body main .biography .biography-right img {
     height: 500px;
     border-radius: 20px;
-  }
-  html body main .biography .biography-right a {
-    display: inline-block;
-    padding: 15px 20px;
-    background-color: rgba(128, 128, 128, 0.171);
-    text-decoration: none;
-    border-radius: 10px;
-    color: white;
-    margin-top: 50px;
-  }
-  html body main .biography .biography-right a .fa-solid {
-    margin-right: 10px;
   }
   html body footer {
     width: 100%;

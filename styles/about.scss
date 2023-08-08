@@ -169,6 +169,17 @@ html {
                     }
 
                     a {
+                        display: inline-block;
+                        padding: 15px 20px;
+                        background-color: rgba(128, 128, 128, 0.171);
+                        text-decoration: none;
+                        border-radius: 10px;
+                        color: white;
+                        margin-top: 50px;
+
+                        .fa-solid {
+                            margin-right: 10px;
+                        }
                         &:hover {
                             background-color: rgba(65, 143, 222, 1);
                             color: $font-color;
@@ -348,19 +359,6 @@ html {
                             border-radius: 20px;
                         }
     
-                        a {
-                            display: inline-block;
-                            padding: 15px 20px;
-                            background-color: rgba(128, 128, 128, 0.171);
-                            text-decoration: none;
-                            border-radius: 10px;
-                            color: white;
-                            margin-top: 50px;
-    
-                            .fa-solid {
-                                margin-right: 10px;
-                            }
-                        }
                     }
                 }
             }
