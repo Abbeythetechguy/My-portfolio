@@ -21,13 +21,12 @@ html body header {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  border: 1px solid white;
 }
 html body header nav {
   display: flex;
 }
 html body header nav .logo-img {
-  margin-right: 20px;
+  margin-right: 50px;
   width: 40px;
   height: 26px;
 }
@@ -46,10 +45,11 @@ html body header nav ul .dropdown {
 }
 html body header nav ul .dropdown .dropdown-content {
   position: absolute;
+  z-index: 4;
   display: none;
   width: 200px;
   flex-direction: column;
-  border: 1px solid white;
+  background-color: #383636;
 }
 html body header nav ul .dropdown .dropdown-content li {
   padding: 20px;
@@ -57,6 +57,9 @@ html body header nav ul .dropdown .dropdown-content li {
 html body header nav ul .dropdown .dropdown-content li .more-dropdown-content-links {
   text-decoration: none;
   color: white;
+}
+html body header nav ul .dropdown .dropdown-content li:hover {
+  background-color: rgb(65, 143, 222);
 }
 html body header nav ul .dropdown:hover .dropdown-content {
   display: block;
@@ -68,6 +71,9 @@ html body header nav .nav-social_icons {
 }
 html body header nav .nav-social_icons:hover {
   color: rgb(74, 74, 236);
+}
+html body header .fa-bars {
+  display: none;
 }
 html body main .hero-section {
   position: relative;
@@ -105,8 +111,15 @@ html body main .hero-section div .hero-section-links {
 html body main .hero-section div .btn-left {
   color: white;
 }
+html body main .hero-section div .btn-left:hover {
+  background-color: rgb(65, 143, 222);
+}
 html body main .hero-section div .btn-right {
   color: #808080;
+}
+html body main .hero-section div .btn-right:hover {
+  background-color: rgb(65, 143, 222);
+  color: white;
 }
 html body main .about-me {
   margin-top: 90px;
@@ -221,57 +234,21 @@ html body main .experience .abt-head {
   font-weight: bold;
 }
 html body main .experience .experience-container {
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  width: 100%;
+  height: 150px;
 }
-html body main .experience .experience-container h2 {
+html body main .experience .experience-container .experience-flex-item {
   text-align: center;
-}
-html body main .experience .experience-container .fa-solid {
-  margin-right: 20px;
-}
-html body main .experience .experience-container .experience-left {
-  width: 48%;
-  height: 300px;
   border-radius: 20px;
-  padding-left: 40px;
-  padding-top: 30px;
+  padding: 30px;
+  width: 22%;
   background-image: linear-gradient(to top right, rgb(27, 24, 113), rgb(32, 60, 80));
 }
-html body main .experience .experience-container .experience-left table {
-  width: 90%;
-}
-html body main .experience .experience-container .experience-left table tr td {
-  width: 50%;
-  padding: 15px 0;
-  font-size: 18rem;
-  font-weight: bold;
-}
-html body main .experience .experience-container .experience-left:hover {
-  background: transparent;
-  border: 1px solid rgb(65, 143, 222);
-}
-html body main .experience .experience-container .experience-right {
-  width: 48%;
-  height: 300px;
-  border-radius: 20px;
-  padding-left: 40px;
-  padding-top: 30px;
-  background-image: linear-gradient(to bottom left, rgb(27, 24, 113), rgb(32, 60, 80));
-}
-html body main .experience .experience-container .experience-right table {
-  width: 90%;
-}
-html body main .experience .experience-container .experience-right table tr td {
-  width: 50%;
-  padding: 15px 0;
-  font-size: 18rem;
-  font-weight: bold;
-}
-html body main .experience .experience-container .experience-right:hover {
-  background: transparent;
-  border: 1px solid rgb(65, 143, 222);
+html body main .experience .experience-container .experience-flex-item h1 {
+  font-size: 40rem;
 }
 html body main .offer-section {
   margin-top: 100px;
@@ -315,4 +292,423 @@ html body main .offer-section .offer-container .offer-right {
   flex-direction: column;
   justify-content: center;
   background-image: linear-gradient(to bottom left, rgb(27, 24, 113), rgb(32, 60, 80));
+}
+html body main .contact {
+  margin-top: 80px;
+}
+html body main .contact .abt-head_small {
+  color: #6b6969;
+  text-align: center;
+  font-size: 20rem;
+}
+html body main .contact .abt-head {
+  color: rgb(65, 143, 222);
+  text-align: center;
+  font-size: 35rem;
+  font-weight: bold;
+}
+html body main .contact .contact-container {
+  display: flex;
+  padding-top: 50px;
+}
+html body main .contact .contact-container .contact-left {
+  width: 48%;
+  padding-left: 100px;
+}
+html body main .contact .contact-container .contact-left .contact-flex-item {
+  width: 250px;
+  height: 180px;
+  background-image: linear-gradient(to top right, rgb(27, 24, 113), rgb(32, 60, 80));
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+html body main .contact .contact-container .contact-left .contact-flex-item h3 {
+  font-size: 18rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+html body main .contact .contact-container .contact-left .contact-flex-item p {
+  font-size: 15rem;
+  margin: 10px 0;
+}
+html body main .contact .contact-container .contact-left .contact-flex-item .contact-links {
+  text-decoration: none;
+  color: rgb(54, 142, 230);
+}
+html body main .contact .contact-container .contact-right {
+  width: 48%;
+}
+html body main .contact .contact-container .contact-right form input {
+  width: 500px;
+  height: 60px;
+  border-radius: 20px;
+  border: 1px solid rgb(65, 143, 222);
+  background-color: transparent;
+  margin-bottom: 30px;
+  padding: 40px;
+  font-size: 18rem;
+  color: #808080;
+}
+html body main .contact .contact-container .contact-right form textarea {
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid rgb(65, 143, 222);
+  background-color: transparent;
+  padding: 35px;
+  font-size: 18rem;
+  color: #808080;
+  margin-bottom: 30px;
+}
+html body main .contact .contact-container .contact-right form button {
+  padding: 15px 20px;
+  background-color: rgb(65, 143, 222);
+  border: 0;
+  border-radius: 10px;
+  font-size: 16rem;
+}
+html body footer {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  margin-top: 100px;
+}
+html body footer .footer-left {
+  width: 50%;
+  font-size: 14rem;
+}
+html body footer .footer-left .footer-logo {
+  width: 70px;
+}
+html body footer .footer-left span {
+  display: block;
+  padding-top: 100px;
+}
+html body footer .footer-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+html body footer .footer-right ul {
+  list-style: none;
+  width: 200px;
+}
+html body footer .footer-right ul li {
+  padding: 10px 0;
+}
+html body footer .footer-right ul li .footer-links {
+  text-decoration: none;
+  color: white;
+}
+html body .hanging-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+html body .hanging-menu .hanging-menu-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 50px;
+  background-color: rgba(5, 5, 5, 0.5607843137);
+}
+html body .hanging-menu .hanging-menu-bar a {
+  text-decoration: none;
+}
+html body .hanging-menu .hanging-menu-bar a .fa-solid {
+  font-size: 25rem;
+  color: rgb(65, 143, 222);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .hanging-menu .hanging-menu-bar a .fa-solid:hover {
+  background-color: rgb(65, 143, 222);
+  color: white;
+}
+html body .hanging-menu .hanging-menu-bar a .fa-regular {
+  font-size: 25rem;
+  color: rgb(65, 143, 222);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .hanging-menu .hanging-menu-bar a .fa-regular:hover {
+  background-color: rgb(65, 143, 222);
+  color: white;
+}
+
+@media screen and (max-width: 505px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    padding: 30px;
+  }
+  html body header {
+    justify-content: center;
+  }
+  html body header .logo-img {
+    margin-right: 100px;
+  }
+  html body header nav ul {
+    display: none;
+  }
+  html body header .fa-bars {
+    display: block;
+    margin-left: 20px;
+  }
+  html body main .hero-section {
+    position: relative;
+    height: calc(100vh - 100px);
+    padding: 50px 0;
+  }
+  html body main .hero-section .hero-section-img {
+    width: 550px;
+    top: 0;
+    right: 0;
+  }
+  html body main .hero-section div h1 {
+    font-size: 45rem;
+  }
+  html body main .hero-section div p {
+    color: #808080;
+    font-size: 20rem;
+  }
+  html body main .hero-section div .hero-section-links {
+    text-decoration: none;
+    padding: 10px;
+  }
+  html body main .about-me .abt-head_small {
+    font-size: 16rem;
+  }
+  html body main .about-me .abt-head {
+    font-size: 25rem;
+  }
+  html body main .about-me .about-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 1300px;
+  }
+  html body main .about-me .about-container .about-me_left {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  html body main .about-me .about-container .about-me_left .under-box {
+    width: 250px;
+    height: 250px;
+  }
+  html body main .about-me .about-container .about-me_left .abt-left-img {
+    width: 250rem;
+    height: 250rem;
+  }
+  html body main .about-me .about-container .about-me_right {
+    width: 100%;
+    height: 1000px;
+  }
+  html body main .about-me .about-container .about-me_right .about-flex-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items {
+    width: 250px;
+    height: 200px;
+    padding: 30px 10px;
+    margin: 10px auto;
+  }
+  html body main .about-me .about-container .about-me_right .about-flex-boxes .middle-item {
+    margin: 0 auto;
+  }
+  html body main .about-me .about-container .about-me_right .about-bulky-text {
+    font-size: 14rem;
+    margin: 30px 0 50px;
+    color: #b4b4b4;
+  }
+  html body main .about-me .about-container .about-me_right .lets-talk-btn {
+    padding: 20px;
+    background-color: rgb(21, 173, 233);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  html body main .about-me .about-container .about-me_right .lets-talk-btn:hover {
+    background-color: white;
+    transition: 2s;
+  }
+  html body main .experience {
+    margin-top: 50px;
+    height: 420px;
+  }
+  html body main .experience .abt-head_small {
+    font-size: 16rem;
+  }
+  html body main .experience .abt-head {
+    font-size: 25rem;
+  }
+  html body main .experience .experience-container {
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 350px;
+  }
+  html body main .experience .experience-container .experience-flex-item {
+    padding: 30px;
+    width: 130px;
+    height: 130px;
+    margin: 10px 0;
+  }
+  html body main .experience .experience-container .experience-flex-item h1 {
+    font-size: 30rem;
+  }
+  html body main .experience .experience-container .experience-flex-item h3 {
+    font-size: 14rem;
+  }
+  html body main .offer-section {
+    margin-top: 50px;
+  }
+  html body main .offer-section .abt-head_small {
+    font-size: 16rem;
+  }
+  html body main .offer-section .abt-head {
+    font-size: 25rem;
+  }
+  html body main .offer-section .offer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+  html body main .offer-section .offer-container .see-more-link {
+    text-decoration: none;
+    color: #6b6969;
+  }
+  html body main .offer-section .offer-container .offer-left {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  html body main .offer-section .offer-container .offer-right {
+    width: 100%;
+    height: 200px;
+  }
+  html body main .offer-section .offer-container h2 {
+    font-size: 19rem;
+  }
+  html body main .contact {
+    margin-top: 50px;
+  }
+  html body main .contact .abt-head_small {
+    font-size: 16rem;
+  }
+  html body main .contact .abt-head {
+    font-size: 25rem;
+  }
+  html body main .contact .contact-container {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  html body main .contact .contact-container .contact-left {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .contact .contact-container .contact-left .contact-flex-item {
+    width: 250px;
+    height: 180px;
+  }
+  html body main .contact .contact-container .contact-right {
+    width: 100%;
+  }
+  html body main .contact .contact-container .contact-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body main .contact .contact-container .contact-right form input {
+    width: 250px;
+    height: 40px;
+    padding: 25px;
+    font-size: 16rem;
+  }
+  html body main .contact .contact-container .contact-right form textarea {
+    width: 250px;
+    height: 200px;
+    padding: 25px;
+    font-size: 16rem;
+    color: #808080;
+  }
+  html body footer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+  html body footer .footer-left {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 14rem;
+  }
+  html body footer .footer-left .footer-logo {
+    width: 70px;
+  }
+  html body footer .footer-left span {
+    display: block;
+    padding-top: 20px;
+  }
+  html body footer .footer-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  html body footer .footer-right ul {
+    list-style: none;
+    width: 200px;
+  }
+  html body footer .footer-right ul li {
+    padding: 10px 0;
+  }
+  html body footer .footer-right ul li .footer-links {
+    text-decoration: none;
+    color: white;
+  }
+  html body .hanging-menu .hanging-menu-bar {
+    width: 320px;
+    height: 60px;
+  }
+  html body .hanging-menu .hanging-menu-bar a {
+    text-decoration: none;
+  }
+  html body .hanging-menu .hanging-menu-bar a .fa-solid {
+    font-size: 20rem;
+  }
+  html body .hanging-menu .hanging-menu-bar a .fa-regular {
+    font-size: 20rem;
+  }
 }/*# sourceMappingURL=style.css.map */
