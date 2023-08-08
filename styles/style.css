@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1px;
+}
+html body {
+  font-size: 16em;
+  background-image: linear-gradient(111.4deg, rgb(7, 7, 9) 6.5%, rgb(10, 8, 59) 93.2%);
+  color: white;
+  font-family: "poppins", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 150px 0;
+}
+html body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border: 1px solid white;
+}
+html body header nav {
+  display: flex;
+}
+html body header nav .logo-img {
+  margin-right: 20px;
+  width: 40px;
+  height: 26px;
+}
+html body header nav ul {
+  display: flex;
+  list-style: none;
+}
+html body header nav ul .nav-links {
+  color: white;
+  font-size: 16rem;
+  margin-right: 20px;
+  text-decoration: none;
+}
+html body header nav ul .dropdown {
+  position: relative;
+}
+html body header nav ul .dropdown .dropdown-content {
+  position: absolute;
+  display: none;
+  width: 200px;
+  flex-direction: column;
+  border: 1px solid white;
+}
+html body header nav ul .dropdown .dropdown-content li {
+  padding: 20px;
+}
+html body header nav ul .dropdown .dropdown-content li .more-dropdown-content-links {
+  text-decoration: none;
+  color: white;
+}
+html body header nav ul .dropdown:hover .dropdown-content {
+  display: block;
+}
+html body header nav .nav-social_icons {
+  color: white;
+  font-size: 18rem;
+  margin-left: 20px;
+}
+html body header nav .nav-social_icons:hover {
+  color: rgb(74, 74, 236);
+}
+html body main .hero-section {
+  position: relative;
+  height: calc(100vh - 93px);
+  padding: 100px 0;
+}
+html body main .hero-section .hero-section-img {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  z-index: -1;
+  top: 10%;
+  right: 0;
+}
+html body main .hero-section div {
+  position: absolute;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+html body main .hero-section div h1 {
+  font-size: 60rem;
+}
+html body main .hero-section div p {
+  color: #808080;
+  font-size: 30rem;
+}
+html body main .hero-section div .hero-section-links {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.171);
+}
+html body main .hero-section div .btn-left {
+  color: white;
+}
+html body main .hero-section div .btn-right {
+  color: #808080;
+}
+html body main .about-me {
+  margin-top: 90px;
+}
+html body main .about-me .abt-head_small {
+  color: #6b6969;
+  text-align: center;
+  font-size: 20rem;
+}
+html body main .about-me .abt-head {
+  color: rgb(65, 143, 222);
+  text-align: center;
+  font-size: 35rem;
+  font-weight: bold;
+}
+html body main .about-me .about-container {
+  display: flex;
+  margin-top: 50px;
+}
+html body main .about-me .about-container .about-me_left {
+  width: 50%;
+  position: relative;
+}
+html body main .about-me .about-container .about-me_left .under-box {
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+  background-image: linear-gradient(to top right, rgb(27, 24, 113), rgb(32, 60, 80));
+  position: absolute;
+  z-index: -1;
+}
+html body main .about-me .about-container .about-me_left .abt-left-img {
+  width: 360rem;
+  height: 360rem;
+  position: absolute;
+  border-radius: 20px;
+  transform: rotate(10deg);
+}
+html body main .about-me .about-container .about-me_left .abt-left-img:hover {
+  transform: rotate(0);
+  transition: 1s;
+}
+html body main .about-me .about-container .about-me_right {
+  width: 50%;
+  height: 550px;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes {
+  display: flex;
+  flex-shrink: 0;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items {
+  width: 150px;
+  height: 200px;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(32, 32, 121);
+  border-radius: 20px;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items .fa-solid {
+  font-size: 25rem;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items h2 {
+  font-size: 17rem;
+  padding: 10px;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items p {
+  font-size: 13rem;
+  padding: 10px;
+  color: #b4b4b4;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items span {
+  font-size: 13rem;
+  color: #b4b4b4;
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .about-flex-items:hover {
+  background-color: transparent;
+  border: 1px solid rgb(65, 143, 222);
+}
+html body main .about-me .about-container .about-me_right .about-flex-boxes .middle-item {
+  margin: 0 20px;
+}
+html body main .about-me .about-container .about-me_right .about-bulky-text {
+  font-size: 18rem;
+  margin: 30px 0 50px;
+  color: #b4b4b4;
+}
+html body main .about-me .about-container .about-me_right .lets-talk-btn {
+  padding: 20px;
+  background-color: rgb(21, 173, 233);
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+html body main .about-me .about-container .about-me_right .lets-talk-btn:hover {
+  background-color: white;
+  transition: 2s;
+}
+html body main .experience {
+  margin-top: 100px;
+}
+html body main .experience .abt-head_small {
+  color: #6b6969;
+  text-align: center;
+  font-size: 20rem;
+}
+html body main .experience .abt-head {
+  color: rgb(65, 143, 222);
+  text-align: center;
+  font-size: 35rem;
+  font-weight: bold;
+}
+html body main .experience .experience-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+html body main .experience .experience-container h2 {
+  text-align: center;
+}
+html body main .experience .experience-container .fa-solid {
+  margin-right: 20px;
+}
+html body main .experience .experience-container .experience-left {
+  width: 48%;
+  height: 300px;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-top: 30px;
+  background-image: linear-gradient(to top right, rgb(27, 24, 113), rgb(32, 60, 80));
+}
+html body main .experience .experience-container .experience-left table {
+  width: 90%;
+}
+html body main .experience .experience-container .experience-left table tr td {
+  width: 50%;
+  padding: 15px 0;
+  font-size: 18rem;
+  font-weight: bold;
+}
+html body main .experience .experience-container .experience-left:hover {
+  background: transparent;
+  border: 1px solid rgb(65, 143, 222);
+}
+html body main .experience .experience-container .experience-right {
+  width: 48%;
+  height: 300px;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-top: 30px;
+  background-image: linear-gradient(to bottom left, rgb(27, 24, 113), rgb(32, 60, 80));
+}
+html body main .experience .experience-container .experience-right table {
+  width: 90%;
+}
+html body main .experience .experience-container .experience-right table tr td {
+  width: 50%;
+  padding: 15px 0;
+  font-size: 18rem;
+  font-weight: bold;
+}
+html body main .experience .experience-container .experience-right:hover {
+  background: transparent;
+  border: 1px solid rgb(65, 143, 222);
+}
+html body main .offer-section {
+  margin-top: 100px;
+}
+html body main .offer-section .abt-head_small {
+  color: #6b6969;
+  text-align: center;
+  font-size: 20rem;
+}
+html body main .offer-section .abt-head {
+  color: rgb(65, 143, 222);
+  text-align: center;
+  font-size: 35rem;
+  font-weight: bold;
+}
+html body main .offer-section .offer-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+html body main .offer-section .offer-container .see-more-link {
+  text-decoration: none;
+  color: #6b6969;
+}
+html body main .offer-section .offer-container .offer-left {
+  width: 48%;
+  height: 200px;
+  border-radius: 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to top right, rgb(27, 24, 113), rgb(32, 60, 80));
+}
+html body main .offer-section .offer-container .offer-right {
+  width: 48%;
+  height: 200px;
+  border-radius: 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to bottom left, rgb(27, 24, 113), rgb(32, 60, 80));
+}/*# sourceMappingURL=style.css.map */
