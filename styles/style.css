@@ -77,7 +77,7 @@ html body header .fa-bars {
 }
 html body main .hero-section {
   position: relative;
-  height: calc(100vh - 93px);
+  height: 600px;
   padding: 100px 0;
 }
 html body main .hero-section .hero-section-img {
