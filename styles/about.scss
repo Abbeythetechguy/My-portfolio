@@ -590,18 +590,19 @@ html {
                 justify-content: center;
 
                 .logo-img {
-                    margin-right: 100px;
+                    margin-right: 0;
+
                 }
 
                 nav {
-
+                    display: none;
                     ul {
                         display: none;
                     }
                 }
 
                 .fa-bars {
-                    display: block;
+                    display: none;
                     margin-left: 20px;
                 }
             }

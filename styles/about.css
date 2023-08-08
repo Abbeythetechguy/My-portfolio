@@ -443,13 +443,16 @@ html body .hanging-menu .hanging-menu-bar a .fa-regular:hover {
     justify-content: center;
   }
   html body header .logo-img {
-    margin-right: 100px;
+    margin-right: 0;
+  }
+  html body header nav {
+    display: none;
   }
   html body header nav ul {
     display: none;
   }
   html body header .fa-bars {
-    display: block;
+    display: none;
     margin-left: 20px;
   }
   html body main .more {
