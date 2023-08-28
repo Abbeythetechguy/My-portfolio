@@ -1,6 +1,8 @@
 // variables
 $darkmode: rgb(0, 0, 0);
 $font-color: white;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 
 // reset css
 * {
@@ -17,7 +19,7 @@ html {
         // border: 1px solid white;
         background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(10, 8, 59) 93.2%);
         color: $font-color;
-        font-family: "poppins", 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: poppins, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         max-width: 1440px;
         margin: 0 auto;
         padding: 32px 100px 0;
@@ -83,6 +85,10 @@ html {
                         }
                     }
                 }
+            }
+
+            .social-nav {
+                display: flex;
 
                 .nav-social_icons {
                     color: $font-color;
@@ -97,6 +103,7 @@ html {
 
             .fa-bars {
                 display: none;
+
             }
         }
 
@@ -1310,9 +1317,49 @@ html {
 
                 nav {
 
-                    ul {
+                    .hido{
                         display: none;
+                        flex-direction: column;
+                        align-items: center;
+                        position: absolute;
+                        left: 0;
+                        top: 80px;
+                        width: 100%;
+                        backdrop-filter: blur(3px);
+                        z-index: 10;
+                        background-image: linear-gradient(111.4deg, rgba(10, 10, 54, 0.637) 6.5%, rgb(10, 8, 82) 93.2%);
+
+
+                        .nav-links {
+                            width: 100%;
+                            display: block;
+                        }
+                        li {
+                            padding: 10px;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: rgba(65, 143, 222, 1);
+                            }
+                        }
+
+                        .dropdown {
+                            display: none;
+                            //     width: 100%;
+
+                            // .dropdown-content{
+                            //     position: relative;
+                            //     top: 0%;
+                            //     width: 100%;
+                            //     display: flex;
+
+                            // }
+                        }
                     }
+                    .showMobNav{
+                        display: block;
+                    }
+                    
                 }
 
                 .fa-bars {

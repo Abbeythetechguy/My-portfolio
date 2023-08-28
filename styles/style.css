@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ html body {
   font-size: 16em;
   background-image: linear-gradient(111.4deg, rgb(7, 7, 9) 6.5%, rgb(10, 8, 59) 93.2%);
   color: white;
-  font-family: "poppins", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   max-width: 1440px;
   margin: 0 auto;
   padding: 32px 100px 0;
@@ -64,12 +65,15 @@ html body header nav ul .dropdown .dropdown-content li:hover {
 html body header nav ul .dropdown:hover .dropdown-content {
   display: block;
 }
-html body header nav .nav-social_icons {
+html body header .social-nav {
+  display: flex;
+}
+html body header .social-nav .nav-social_icons {
   color: white;
   font-size: 18rem;
   margin-left: 20px;
 }
-html body header nav .nav-social_icons:hover {
+html body header .social-nav .nav-social_icons:hover {
   color: rgb(74, 74, 236);
 }
 html body header .fa-bars {
@@ -1011,8 +1015,35 @@ html body .hanging-menu .hanging-menu-bar a .fa-regular:hover {
   html body header .logo-img {
     margin-right: 100px;
   }
-  html body header nav ul {
+  html body header nav .hido {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    z-index: 10;
+    background-image: linear-gradient(111.4deg, rgba(10, 10, 54, 0.637) 6.5%, rgb(10, 8, 82) 93.2%);
+  }
+  html body header nav .hido .nav-links {
+    width: 100%;
+    display: block;
+  }
+  html body header nav .hido li {
+    padding: 10px;
+    width: 100%;
+  }
+  html body header nav .hido li:hover {
+    background-color: rgb(65, 143, 222);
+  }
+  html body header nav .hido .dropdown {
+    display: none;
+  }
+  html body header nav .showMobNav {
+    display: block;
   }
   html body header .fa-bars {
     display: block;
