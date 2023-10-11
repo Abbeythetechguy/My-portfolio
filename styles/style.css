@@ -10,6 +10,7 @@ html {
 }
 html body {
   font-size: 16em;
+  overflow-x: hidden;
   background-image: linear-gradient(111.4deg, rgb(7, 7, 9) 6.5%, rgb(10, 8, 59) 93.2%);
   color: white;
   font-family: poppins, "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
