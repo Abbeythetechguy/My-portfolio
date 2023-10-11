@@ -3,6 +3,7 @@ $darkmode: rgb(0, 0, 0);
 $font-color: white;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
+$defaultfont: poppins, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 // reset css
 * {
@@ -19,16 +20,26 @@ html {
         // border: 1px solid white;
         background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgb(10, 8, 59) 93.2%);
         color: $font-color;
-        font-family: poppins, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $defaultfont;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 32px 100px 0;
+
+        input{
+            font-family: $defaultfont;
+        }
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 60px;
+            height: 80px;
+            padding-right: 100px ;
+            padding-left: 30px ;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            // background: rgba(0, 0, 0, 0.364);
             // border: 1px solid white;
 
             .logo-img {
@@ -51,39 +62,6 @@ html {
                         margin-right: 20px;
                         text-decoration: none;
                     }
-
-                    .dropdown {
-                        position: relative;
-
-                        .dropdown-content {
-                            position: absolute;
-                            z-index: 4;
-                            display: none;
-                            width: 200px;
-                            // height: 200px;
-                            flex-direction: column;
-                            background-color: #383636;
-
-                            li {
-                                padding: 20px;
-
-                                .more-dropdown-content-links {
-                                    text-decoration: none;
-                                    color: $font-color;
-
-                                }
-
-                                &:hover {
-                                    background-color: rgba(65, 143, 222, 1);
-                                }
-                            }
-
-                        }
-
-                        &:hover .dropdown-content {
-                            display: block;
-                        }
-                    }
                 }
             }
 
@@ -103,11 +81,14 @@ html {
 
             .fa-bars {
                 display: none;
-
+            }
+            .fa-close {
+                display: none;
             }
         }
 
         main {
+            padding: 0 100px ;
 
             .hero-section {
                 position: relative;
@@ -205,22 +186,23 @@ html {
                             position: absolute;
                             border-radius: 20px;
                             transform: rotate(10deg);
+                            transition: .5s ease-in-out;
 
 
                             &:hover {
                                 transform: rotate(0);
-                                transition: 1s;
+                                transition: .5s ease-in-out;
                             }
                         }
                     }
 
                     .about-me_right {
                         width: 50%;
-                        height: 550px;
 
                         .about-flex-boxes {
                             display: flex;
                             flex-shrink: 0;
+                            gap: 10px;
 
                             .about-flex-items {
                                 width: 200rem;
@@ -232,6 +214,7 @@ html {
                                 align-items: center;
                                 background-color: rgb(32, 32, 121);
                                 border-radius: 20px;
+                                transition: 0.5s ease-in-out;
 
                                 .fa-solid {
                                     font-size: 25rem;
@@ -254,14 +237,11 @@ html {
                                 }
 
                                 &:hover {
+                                    transition: 0.5s ease-in-out;
                                     background-color: transparent;
                                     border: 1px solid rgba(65, 143, 222, 1);
 
                                 }
-                            }
-
-                            .middle-item {
-                                margin: 0 20px;
                             }
                         }
 
@@ -281,7 +261,7 @@ html {
 
                             &:hover {
                                 background-color: white;
-                                transition: 2s;
+                                transition: 1s;
                             }
                         }
                     }
@@ -289,7 +269,7 @@ html {
             }
 
             .experience {
-                margin-top: 100px;
+                margin-top: 90px;
 
                 .abt-head_small {
                     color: #6b6969;
@@ -309,18 +289,34 @@ html {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
-                    height: 150px;
+                    // height: 150px;
 
                     .experience-flex-item {
+                        display: grid;
+                        place-items: center;
                         text-align: center;
                         border-radius: 20px;
-                        padding: 30px;
-                        width: 22%;
-                        // border: 1px solid white;
+                        padding: 2%;
+                        width: 20%;
+                        transition: .3s ease-in-out;
                         background-image: linear-gradient(to top right, rgba(27, 24, 113, 1), rgb(32, 60, 80));
 
-                        h1 {
-                            font-size: 40rem;
+                        img{
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                        .css-img{
+                            width: 80px;
+                        }
+
+                        .react-img{
+                            height: 90px;
+                        }
+
+                        &:hover{
+                            transition: .3s ease-in-out;
+                            transform: scale(1.1);
                         }
                     }
                 }
@@ -478,6 +474,7 @@ html {
             height: 350px;
             display: flex;
             margin-top: 100px;
+            padding: 0 100px ;
 
             .footer-left {
                 width: 50%;
@@ -516,9 +513,9 @@ html {
 
         }
 
-        .hanging-menu {
+        #hangingMenu {
             width: 100%;
-            display: flex;
+            display: none;
             justify-content: center;
 
             .hanging-menu-bar {
@@ -533,8 +530,16 @@ html {
                 bottom: 50px;
                 background-color: #0505058f;
 
-                a {
+                .hanging-menu-links {
                     text-decoration: none;
+                    background-color: transparent;
+                    border: 0;
+
+                    &.active{
+                        transition: 1s;
+                            background-color: rgba(65, 143, 222, 1);
+                            color: $font-color;
+                    }
 
                     .fa-solid {
                         font-size: 25rem;
@@ -548,26 +553,14 @@ html {
                         align-items: center;
 
                         &:hover {
+                            transition: 1s;
                             background-color: rgba(65, 143, 222, 1);
                             color: $font-color;
                         }
                     }
 
                     .fa-regular {
-                        font-size: 25rem;
-                        color: rgba(65, 143, 222, 1);
-                        padding: 10px;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        &:hover {
-                            background-color: rgba(65, 143, 222, 1);
-                            color: $font-color;
-                        }
+                        @extend .fa-solid;
                     }
                 }
             }
@@ -575,12 +568,11 @@ html {
     }
 }
 
-@media screen and (min-width:808px) and (max-width:1024px) {
+@media screen and (max-width:1024px) {
     html {
         font-size: 1px;
 
         body {
-            padding: 30px 70px;
             background-image: linear-gradient(111.4deg, rgb(5, 5, 24) 6.5%, rgb(10, 8, 59) 93.2%);
 
             header {
@@ -600,14 +592,10 @@ html {
                         }
                     }
                 }
-
-                .fa-bars {
-                    display: none;
-                    margin-left: 10px;
-                }
             }
 
             main {
+                padding: 30px 70px;
 
                 .hero-section {
                     position: relative;
@@ -640,8 +628,6 @@ html {
                 }
 
                 .about-me {
-                    // border: 1px solid white;
-                    // height: 1150px;
 
                     .abt-head_small {
                         font-size: 19rem;
@@ -653,14 +639,10 @@ html {
 
                     .about-container {
                         display: flex;
-                        // flex-direction: column;
                         margin-top: 50px;
-                        // height: 1000px;
-                        // border: 1px solid white;
 
                         .about-me_left {
                             width: 45%;
-                            height: 300px;
                             display: flex;
                             justify-content: flex-start;
                             position: relative;
@@ -678,12 +660,9 @@ html {
 
                         .about-me_right {
                             width: 55%;
-                            height: 460px;
-                            // border: 1px solid white;
 
                             .about-flex-boxes {
                                 display: flex;
-                                // flex-wrap: wrap;
                                 flex-shrink: 0;
 
                                 .about-flex-items {
@@ -732,8 +711,6 @@ html {
 
                 .experience {
                     margin-top: 100px;
-                    height: 250px;
-                    // border: 1px solid white;
 
                     .abt-head_small {
                         font-size: 19rem;
@@ -748,22 +725,28 @@ html {
                         justify-content: space-between;
                         flex-wrap: wrap;
                         width: 100%;
-                        height: 350px;
 
                         .experience-flex-item {
-                            padding: 30px;
+                            padding: 20px;
                             width: 22%;
                             height: 130px;
                             margin: 10px 0;
                             flex-shrink: 0;
+                            border-radius: 15px;
 
-                            h1 {
-                                font-size: 30rem;
+                            img{
+                                width: 80px;
+                                height: 80px;
                             }
-
-                            h3 {
-                                font-size: 14rem;
+    
+                            .css-img{
+                                width: 60px;
                             }
+    
+                            .react-img{
+                                height: 70px;
+                            }
+    
                         }
                     }
                 }
@@ -848,6 +831,7 @@ html {
                                     height: 40px;
                                     padding: 25px;
                                     font-size: 17rem;
+                                    border-radius: 10px;
                                 }
 
                                 textarea {
@@ -864,6 +848,7 @@ html {
             }
 
             footer {
+                padding: 30px 70px;
                 width: 100%;
                 height: 350px;
                 display: flex;
@@ -936,15 +921,15 @@ html {
 
 }
 
-@media screen and (min-width:605px) and (max-width:808px) {
+@media screen and (max-width:808px) {
     html {
         font-size: 1px;
 
         body {
-            padding: 50px;
             background-image: linear-gradient(111.4deg, rgb(5, 5, 24) 6.5%, rgb(10, 8, 59) 93.2%);
 
             header {
+                padding: 50px;
                 justify-content: space-between;
 
                 .logo-img {
@@ -960,19 +945,17 @@ html {
                             margin-right: 10px;
                         }
 
-                        .notebook {
-                            display: none;
-                        }
                     }
                 }
 
                 .fa-bars {
                     display: none;
-                    margin-left: 10px;
+                    // margin-left: 10px;
                 }
             }
 
             main {
+                padding: 50px;
 
                 .hero-section {
                     position: relative;
@@ -1005,8 +988,6 @@ html {
                 }
 
                 .about-me {
-                    // border: 1px solid white;
-                    height: 1150px;
 
                     .abt-head_small {
                         font-size: 18rem;
@@ -1020,8 +1001,6 @@ html {
                         display: flex;
                         flex-direction: column;
                         margin-top: 50px;
-                        height: 1000px;
-                        // border: 1px solid white;
 
                         .about-me_left {
                             width: 100%;
@@ -1043,8 +1022,6 @@ html {
 
                         .about-me_right {
                             width: 100%;
-                            height: 1000px;
-                            // border: 1px solid white;
                             margin-top: 100px;
 
                             .about-flex-boxes {
@@ -1074,13 +1051,15 @@ html {
 
                             .lets-talk-btn {
                                 display: flex;
-                                padding: 20px 30px;
+                                padding: 15px 20px;
+                                width: 150px;
                                 justify-content: center;
                                 // background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(38,51,97,1) 0%, rgba(65,143,222,1) 79% );
                                 background-color: rgb(21, 173, 233);
                                 border-radius: 10px;
                                 text-decoration: none;
                                 color: black;
+
 
                                 &:hover {
                                     background-color: white;
@@ -1093,7 +1072,7 @@ html {
 
                 .experience {
                     margin-top: 100px;
-                    height: 420px;
+                    // height: auto;
                     // border: 1px solid white;
 
                     .abt-head_small {
@@ -1107,23 +1086,29 @@ html {
                     .experience-container {
                         margin-top: 30px;
                         justify-content: space-evenly;
+                        align-items: center;
                         flex-wrap: wrap;
                         width: 100%;
-                        height: 350px;
 
                         .experience-flex-item {
-                            padding: 30px;
-                            width: 130px;
-                            height: 130px;
+                            padding: 10px;
+                            width: 100px;
+                            height: 100px;
                             margin: 10px 0;
 
-                            h1 {
-                                font-size: 30rem;
+                            img{
+                                width: 60px;
+                                height: 60px;
                             }
 
-                            h3 {
-                                font-size: 14rem;
+                            .css-img{
+                                width: 40px;
                             }
+    
+                            .react-img{
+                                height: 50px;
+                            }
+    
                         }
                     }
                 }
@@ -1210,6 +1195,7 @@ html {
                                     height: 40px;
                                     padding: 25px;
                                     font-size: 17rem;
+                                    border-radius: 10px;
                                 }
 
                                 textarea {
@@ -1226,6 +1212,7 @@ html {
             }
 
             footer {
+                padding: 50px;
                 width: 100%;
                 height: 300px;
                 display: flex;
@@ -1300,42 +1287,48 @@ html {
 
 }
 
-@media screen and (max-width:605px) {
+@media screen and (max-width:605px) {   
     html {
         font-size: 1px;
 
         body {
-            padding: 30px;
+            overflow-x: hidden;
             background-image: linear-gradient(111.4deg, rgb(10, 10, 54) 6.5%, rgb(10, 8, 82) 93.2%);
 
             header {
-                justify-content: center;
+                padding: 20px;
 
                 .logo-img {
-                    margin-right: 100px;
+                    margin-right: 200px;
                 }
 
                 nav {
 
-                    .hido{
-                        display: none;
+                    #mobile-side-nav{
+                        visibility: hidden;
+                        display: flex;
                         flex-direction: column;
                         align-items: center;
                         position: absolute;
-                        left: 0;
-                        top: 80px;
-                        width: 100%;
-                        backdrop-filter: blur(3px);
+                        padding: 100px 0;
+                        background-image: linear-gradient(111.4deg, rgb(10, 10, 54) 6.5%, rgb(10, 8, 82) 93.2%);
                         z-index: 10;
-                        background-image: linear-gradient(111.4deg, rgba(10, 10, 54, 0.637) 6.5%, rgb(10, 8, 82) 93.2%);
+                        width: 80%;
+                        height: 100vh;
+                        right: 0;
+                        top: 0;
+                        transform: translateX(100%);
+                        transition: 1s ease-in-out;
+                        backdrop-filter: blur(10px);
 
 
                         .nav-links {
                             width: 100%;
                             display: block;
+                            padding: 0 40px;
                         }
                         li {
-                            padding: 10px;
+                            padding: 10px 0;
                             width: 100%;
 
                             &:hover {
@@ -1345,30 +1338,30 @@ html {
 
                         .dropdown {
                             display: none;
-                            //     width: 100%;
+                        }
 
-                            // .dropdown-content{
-                            //     position: relative;
-                            //     top: 0%;
-                            //     width: 100%;
-                            //     display: flex;
-
-                            // }
+                        &.open{
+                            visibility: visible;
+                            transform: translateX(0);
+                            transition: 1s ease-in-out;
                         }
                     }
-                    .showMobNav{
-                        display: block;
-                    }
-                    
                 }
 
                 .fa-bars {
                     display: block;
-                    margin-left: 20px;
+                    // margin-left: 10px;
+                }
+                .fa-close {
+                    display: block;
+                    position: absolute;
+                    top:30px;
+                    right: 50px;
                 }
             }
 
             main {
+                padding: 30px;
 
                 .hero-section {
                     position: relative;
@@ -1617,6 +1610,7 @@ html {
             }
 
             footer {
+                padding: 30px;
                 width: 100%;
                 height: 680px;
                 display: flex;
@@ -1669,7 +1663,7 @@ html {
 
             }
 
-            .hanging-menu {
+            #hanging-menu {
 
                 .hanging-menu-bar {
                     width: 300px;
