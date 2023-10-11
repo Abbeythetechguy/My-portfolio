@@ -1009,7 +1009,6 @@ html body #hangingMenu .hanging-menu-bar .hanging-menu-links .fa-solid:hover, ht
   }
   html body header {
     padding: 20px;
-    overflow: hidden;
   }
   html body header .logo-img {
     margin-right: 100px;
