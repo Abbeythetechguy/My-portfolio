@@ -1053,6 +1053,7 @@ html body #hangingMenu .hanging-menu-bar .hanging-menu-links .fa-solid:hover, ht
   }
   html body header .fa-bars {
     display: block;
+    margin-left: 10px;
   }
   html body header .fa-close {
     display: block;
