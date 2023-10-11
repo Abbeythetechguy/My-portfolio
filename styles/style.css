@@ -1058,8 +1058,8 @@ html body #hangingMenu .hanging-menu-bar .hanging-menu-links .fa-solid:hover, ht
   html body header .fa-close {
     display: block;
     position: absolute;
-    top: 30px;
-    right: 50px;
+    top: 20px;
+    right: 30px;
   }
   html body main {
     padding: 30px;
