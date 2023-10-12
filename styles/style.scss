@@ -13,6 +13,7 @@ $defaultfont: poppins, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unic
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 1px;
 
     body {
@@ -1298,7 +1299,6 @@ html {
 
             header {
                 padding: 20px;
-                // overflow-y: hidden;
 
                 .logo-img {
                     margin-right: 100px;
