@@ -1360,7 +1360,7 @@ html {
                     .hamburger-btn {
                         margin-left: 10px;
                         width: 30px;
-                        height: 5px;
+                        height: 3px;
                         border-radius: 10px;
                         background: white;
                         position: absolute;
@@ -1368,21 +1368,21 @@ html {
 
                         &::before {
                             position: absolute;
-                            top: 10px;
+                            top: 7px;
                             content: "";
                             width: 30px;
-                            height: 5px;
+                            height: 3px;
                             border-radius: 10px;
                             background-color: white;
                         }
 
                         &::after {
                             position: absolute;
-                            bottom: 10px;
+                            bottom: 7px;
                             content: "";
                             border-radius: 10px;
                             width: 30px;
-                            height: 5px;
+                            height: 3px;
                             background-color: white;
                         }
                     }
@@ -1391,11 +1391,15 @@ html {
                         transform: rotate(180deg) ;
 
                         &::before {
-                            transform: rotate(45deg) translate(-11px, -1px);
+                            transform: rotate(-45deg) translate(10px, 10px);
+                            top: 0;
+                            width: 20px;
                         }
 
                         &::after {
-                            transform: rotate(-45deg) translate(-0px, 16px);
+                            transform: rotate(45deg);
+                            bottom: 0;
+                            width: 20px;
 
                         }
                     }
