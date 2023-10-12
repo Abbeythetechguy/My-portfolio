@@ -1,12 +1,11 @@
 // This is for the Hamburger Menu
 let displaySideNav = document.getElementById("mobile-side-nav");
+let hambElem = document.querySelector('.hamburger-btn')
 let x = window.matchMedia("(max-width: 700px)")
 
 function showSideNav() {
-  displaySideNav.classList.add('open')
-}
-function closeSideNav() {
-  displaySideNav.classList.remove('open')
+  displaySideNav.classList.toggle('open')
+  hambElem.classList.toggle('hamb_open')
 }
 window.onclick = function (event){
   if (event.target == displaySideNav){
