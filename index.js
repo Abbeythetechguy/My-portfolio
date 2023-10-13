@@ -3,6 +3,12 @@ let displaySideNav = document.getElementById("mobile-side-nav");
 let hambElem = document.querySelector('.hamburger-btn')
 let x = window.matchMedia("(max-width: 700px)")
 
+// document.querySelector('.lightmode_switch').addEventListener('click', lightMode)
+// function lightMode(){
+//   document.body.style.background = 'white'
+//   document.body.style.color = 'black'
+// }
+
 function showSideNav() {
   displaySideNav.classList.toggle('open')
   hambElem.classList.toggle('hamb_open')
@@ -18,18 +24,37 @@ let hangingMenu = document.getElementById("hangingMenu");
 // hangingMenu.addEventListener('scroll', showHangingMenu);
 // hangingMenu.style.display = "none";
 
-function showHangingMenu() {
-  hangingMenu.style.display = "flex";
+// function showHangingMenu() {
+//   hangingMenu.style.display = "flex";
+// }
+
+// const hangingLinks = document.getElementById('.hanging-menu-links')
+// hangingLinks.addEventListener("click", activeHangingLinks)
+
+// let activetab =false;
+// function activeHangingLinks(){
+//  if (activetab) {
+//     hangingLinks.document.classList.add('active')
+//  } else {
+//     hangingLinks.document.classList.remove('active')
+//  }
+// }
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-const hangingLinks = document.getElementById('.hanging-menu-links')
-hangingLinks.addEventListener("click", activeHangingLinks)
-
-let activetab =false;
-function activeHangingLinks(){
- if (activetab) {
-    hangingLinks.document.classList.add('active')
- } else {
-    hangingLinks.document.classList.remove('active')
- }
+function showSlides(n) {
+  let slides = document.getElementsByClassName("testimonial-text");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
 }

@@ -56,6 +56,7 @@ html {
 
                 ul {
                     display: flex;
+                    align-items: center;
                     list-style: none;
 
                     .nav-links {
@@ -64,7 +65,14 @@ html {
                         margin-right: 20px;
                         text-decoration: none;
                     }
+
+                    button {
+                        padding: 5px 8px;
+                        border-radius: 10px;
+                        border: 0;
+                    }
                 }
+
             }
 
             .social-nav {
@@ -374,6 +382,84 @@ html {
                 }
             }
 
+            .testimonials {
+                margin-top: 100px;
+
+                .abt-head_small {
+                    color: #6b6969;
+                    text-align: center;
+                    font-size: 20rem;
+                }
+
+                .abt-head {
+                    color: rgba(65, 143, 222, 1);
+                    text-align: center;
+                    font-size: 35rem;
+                    font-weight: bold;
+                }
+
+                .testimonial_carousel {
+                    display: flex;
+                    position: relative;
+
+                    .carousel-prev-btn{
+                        position: absolute;
+                        padding: 10px 15px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        border: 0;
+                        top: 50%;
+                        font-size: 20px;
+                        color: white;
+                        background-image: linear-gradient(to top right, rgba(27, 24, 113, 1), rgb(32, 60, 80));
+                        z-index: 5;
+                    }
+
+                    .carousel-next-btn{
+                        @extend .carousel-prev-btn;
+                        right: 0;
+                    }
+
+                    .testimonial-text {
+                        display: none;
+                        flex-shrink: 0;
+                        width: 50%;
+                        margin: 0 auto;
+                        border-radius: 20px;
+                        padding: 20px;
+                        background-image: linear-gradient(to top right, rgba(27, 24, 113, 1), rgb(32, 60, 80));
+
+
+                       .client_profile{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        // border: 1px solid whitesmoke;
+                        margin-top: 30px;
+
+                        .client_profile-left{
+                            display: flex;
+                            align-items: center;
+
+                            img{
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                border: 5px solid white;
+                            }
+                        }
+
+                        .client_profile-right{
+
+                            .clients_name {
+                                color: rgba(65, 143, 222, 1);
+                            }
+                        }
+                       }
+                    }
+                }
+            }
+
             .contact {
                 margin-top: 80px;
 
@@ -436,11 +522,11 @@ html {
                             input {
                                 width: 500px;
                                 height: 60px;
-                                border-radius: 20px;
+                                border-radius: 15px;
                                 border: 1px solid rgba(65, 143, 222, 1);
                                 background-color: transparent;
                                 margin-bottom: 30px;
-                                padding: 40px;
+                                padding: 20px;
                                 font-size: 18rem;
                                 color: #808080;
                             }
@@ -451,10 +537,11 @@ html {
                                 border-radius: 20px;
                                 border: 1px solid rgba(65, 143, 222, 1);
                                 background-color: transparent;
-                                padding: 35px;
+                                padding: 20px;
                                 font-size: 18rem;
                                 color: #808080;
                                 margin-bottom: 30px;
+                                font-family: $defaultfont;
                             }
 
                             button {
@@ -1192,7 +1279,7 @@ html {
                                 align-items: center;
 
                                 input {
-                                    width: 350px;
+                                    width: 100%;
                                     height: 40px;
                                     padding: 25px;
                                     font-size: 17rem;
@@ -1200,7 +1287,7 @@ html {
                                 }
 
                                 textarea {
-                                    width: 350px;
+                                    width: 100%;
                                     height: 250px;
                                     padding: 25px;
                                     font-size: 17rem;
@@ -1386,9 +1473,10 @@ html {
                             background-color: white;
                         }
                     }
-                    .hamb_open{
+
+                    .hamb_open {
                         background: transparent;
-                        transform: rotate(180deg) ;
+                        transform: rotate(180deg);
 
                         &::before {
                             transform: rotate(-45deg) translate(10px, 10px);
@@ -1599,6 +1687,38 @@ html {
                     }
                 }
 
+                .testimonials {
+                    margin-top: 100px;
+
+                    .abt-head_small {
+                        color: #6b6969;
+                        text-align: center;
+                        font-size: 20rem;
+                    }
+
+                    .abt-head {
+                        color: rgba(65, 143, 222, 1);
+                        text-align: center;
+                        font-size: 35rem;
+                        font-weight: bold;
+                    }
+
+                    .testimonial_carousel {
+                        display: flex;
+
+                        .testimonial-text {
+                            flex-shrink: 0;
+                            width: 100%;
+                            margin: 0 auto;
+                            display: block;
+                            border-radius: 20px;
+                            padding: 20px;
+                            background-image: linear-gradient(to top right, rgba(27, 24, 113, 1), rgb(32, 60, 80));
+
+                        }
+                    }
+                }
+
                 .contact {
                     margin-top: 50px;
 
@@ -1636,14 +1756,14 @@ html {
                                 align-items: center;
 
                                 input {
-                                    width: 300px;
+                                    width: 100%;
                                     height: 40px;
                                     padding: 25px;
                                     font-size: 16rem;
                                 }
 
                                 textarea {
-                                    width: 300px;
+                                    width: 100%;
                                     height: 200px;
                                     padding: 25px;
                                     font-size: 16rem;

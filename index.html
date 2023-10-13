@@ -13,16 +13,23 @@
 
 </head>
 
-<body id="body" onscroll="showHangingMenu()">
+<body id="body">
     <header>
         <img src="./images/Logo.png" alt="" class="logo-img">
         <nav>
             <ul id="mobile-side-nav" class="hido">
-                <li><a href="#about" class="nav-links" target="_blank">About</a></li>
+                <li><a href="#home" class="nav-links">Home</a></li>
+                <li><a href="#about" class="nav-links">About</a></li>
                 <li><a href="#skills" class="nav-links notebook">Skills</a></li>
                 <li><a href="#work" class="nav-links">Work</a></li>
+                <li><a href="#testimonials" class="nav-links">Testimonials</a></li>
                 <li><a href="#contact" class="nav-links">Contact</a></li>
-                <li><a href="#gallery" class="nav-links">Gallery</a></li>
+                <!-- <button class="lightmode_switch">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="black" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: black;"><path d="M11.3807 2.01904C9.91573 3.38786 9 5.33708 9 7.50018C9 11.6423 12.3579 15.0002 16.5 15.0002C18.6631 15.0002 20.6123 14.0844 21.9811 12.6195C21.6613 17.8539 17.3149 22.0002 12 22.0002C6.47715 22.0002 2 17.523 2 12.0002C2 6.68532 6.14629 2.33888 11.3807 2.01904Z"></path></svg>
+                </button>
+                <button>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="black" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style="color: black;"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+                </button> -->
             </ul>
         </nav>
         <div class="social-nav">
@@ -35,11 +42,10 @@
             <span class="hamburger-menu" onclick="showSideNav()">
                 <i class="hamburger-btn"></i>
             </span>
-
         </div>
     </header>
     <main>
-        <section class="hero-section">
+        <section id="home" class="hero-section">
             <div data-aos="fade-up" data-aos-duration="1000">
                 <h1>I'm Abbey Ezeilo</h1>
                 <span>
@@ -121,6 +127,57 @@
                 <div class="offer-right" data-aos="fade-left" data-aos-duration="2000">
                     <h2>Software Development</h2>
                     <a href="" class="see-more-link">See more <i class="fa-solid fa-angle-up fa-rotate-90"></i></a>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up" id="testimonials" class="testimonials">
+            <p class="abt-head_small">What People Say</p>
+            <h1 class="abt-head">Testimonials</h1>
+            <div class="testimonial_carousel">
+                <button class="carousel-prev-btn" onclick="plusSlides(-1)">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="carousel-next-btn" onclick="plusSlides(1)">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <div class="testimonial-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia consectetur sequi facilis
+                        architecto similique nostrum libero quibusdam, error perferendis fugit nam culpa dolores,
+                        quisquam eum cumque! Tempore quod amet inventore consequatur unde, ea dolores quisquam
+                        voluptatum sequi cum nobis iusto?</p>
+                    <div class="client_profile" data-aos="zoom-in">
+                        <div class="client_profile-left"><img src="/images/img-2.png" alt=""></div>
+                        <div class="client_profile-right">
+                            <p class="clients_name">Abbey</p>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia consectetur sequi facilis
+                        architecto similique nostrum libero quibusdam, error perferendis fugit nam culpa dolores,
+                        quisquam eum cumque! Tempore quod amet inventore consequatur unde, ea dolores quisquam
+                        voluptatum sequi cum nobis iusto?</p>
+                    <div class="client_profile" data-aos="zoom-in">
+                        <div class="client_profile-left"><img src="/images/Circle Portrait.png" alt=""></div>
+                        <div class="client_profile-right">
+                            <p class="clients_name">Chidi Onyeanisi</p>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia consectetur sequi facilis
+                        architecto similique nostrum libero quibusdam, error perferendis fugit nam culpa dolores,
+                        quisquam eum cumque! Tempore quod amet inventore consequatur unde, ea dolores quisquam
+                        voluptatum sequi cum nobis iusto?</p>
+                    <div class="client_profile" data-aos="zoom-in">
+                        <div class="client_profile-left"><img src="/images/Circle Portrait.png" alt=""></div>
+                        <div class="client_profile-right">
+                            <p class="clients_name">Claus Kenrick</p>
+                            <p>Architectural Engineer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
