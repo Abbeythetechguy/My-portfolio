@@ -13,7 +13,7 @@ function showSideNav() {
   hambElem.classList.toggle('hamb_open')
 }
 
-const closure = document.querySelectorAll('.hido li')
+const closure = document.querySelectorAll('.mobSide li')
 
 closure.forEach(item => item.addEventListener('click', showSideNav))
 
