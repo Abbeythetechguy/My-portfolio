@@ -73,6 +73,9 @@ html body header .social-nav .nav-social_icons:hover {
 html body header .hamburger-menu {
   display: none;
 }
+html body #mobile-side-nav {
+  display: none;
+}
 html body main {
   padding: 0 100px;
 }
@@ -1081,42 +1084,8 @@ html body #hangingMenu .hanging-menu-bar .hanging-menu-links .fa-solid:hover, ht
   html body header .logo-img {
     margin-right: 100px;
   }
-  html body header nav #mobile-side-nav {
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    padding: 100px 0;
-    background-image: linear-gradient(111.4deg, rgb(10, 10, 54) 6.5%, rgb(10, 8, 82) 93.2%);
-    z-index: 10;
-    width: 100%;
-    right: 0;
-    top: 80px;
-    transform: translateY(-100%);
-    transition: 1s ease-in-out;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-  }
-  html body header nav #mobile-side-nav .nav-links {
-    width: 100%;
-    display: block;
-    padding: 0 40px;
-  }
-  html body header nav #mobile-side-nav li {
-    padding: 10px 0;
-    width: 100%;
-  }
-  html body header nav #mobile-side-nav li:hover {
-    background-color: rgb(65, 143, 222);
-  }
-  html body header nav #mobile-side-nav .dropdown {
+  html body header nav .hido {
     display: none;
-  }
-  html body header nav #mobile-side-nav.open {
-    visibility: visible;
-    transform: translateY(0);
-    transition: 1s ease-in-out;
   }
   html body header .hamburger-menu {
     display: block;
@@ -1165,6 +1134,46 @@ html body #hangingMenu .hanging-menu-bar .hanging-menu-links .fa-solid:hover, ht
     transform: rotate(45deg);
     bottom: 0;
     width: 20px;
+  }
+  html body #mobile-side-nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    padding: 100px 0;
+    background-image: linear-gradient(111.4deg, rgb(10, 10, 54) 6.5%, rgb(10, 8, 82) 93.2%);
+    z-index: 5;
+    width: 100%;
+    right: 0;
+    top: 80px;
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    list-style-type: none;
+  }
+  html body #mobile-side-nav .nav-links {
+    width: 100%;
+    display: block;
+    padding: 0 40px;
+    text-decoration: none;
+    color: white;
+  }
+  html body #mobile-side-nav li {
+    padding: 10px 0;
+    width: 100%;
+  }
+  html body #mobile-side-nav li:hover {
+    background-color: rgb(65, 143, 222);
+  }
+  html body #mobile-side-nav .dropdown {
+    display: none;
+  }
+  html body #mobile-side-nav.open {
+    visibility: visible;
+    transform: translateY(0);
+    transition: 1s ease-in-out;
   }
   html body main {
     padding: 30px;

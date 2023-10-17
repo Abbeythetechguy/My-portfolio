@@ -15,12 +15,7 @@ function showSideNav() {
 
 const closure = document.querySelectorAll('.hido li')
 
-function closeMobSideNav(){
-  displaySideNav.classList.toggle('open')
-  hambElem.classList.toggle('hamb_open')
-}
-
-closure.forEach(item => addEventListener('click', closeMobSideNav))
+closure.forEach(item => item.addEventListener('click', showSideNav))
 
 window.onclick = function (event){
   if (event.target == displaySideNav){
