@@ -1,7 +1,6 @@
 // This is for the Hamburger Menu
 let displaySideNav = document.getElementById("mobile-side-nav");
 let hambElem = document.querySelector('.hamburger-btn')
-let x = window.matchMedia("(max-width: 700px)")
 
 // document.querySelector('.lightmode_switch').addEventListener('click', lightMode)
 // function lightMode(){
